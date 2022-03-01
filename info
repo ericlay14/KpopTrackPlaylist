@@ -1,1 +1,22 @@
-afasd
+Solo Project Brief
+
+
+1. Identify your user(s)
+Myself and maybe other Korean-pop music fans
+2. What is the problem you’re solving?
+Not necessarily a problem, a way of finding out if I can get songs and music videos of an artist showing at the same time
+3. What is the solution?
+Making a card that would have all of my favorite artists information, favorite tracks of the group and a clip of the music video
+4. What is the MVP scope? (core features you must get working)
+Set up a database to have the information that I need for each artist. 
+To set up a container to hold each artist's information.
+Use react/html to properly make it appear on the localhost
+5. What are the tough technical challenges involved with solving this problem?
+Setting up a database because the database unit really confused me, probably will do more research on how to get a proper database setup
+Finding a way to get my information besides coding into a database, maybe find an api for this
+The use of music and music videos will be hard to implement
+6. What are the stretch goals?
+To have a on-click feature to hide and show cards
+Add a favorite button to show which cards I like the best
+
+
