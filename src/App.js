@@ -2,7 +2,7 @@ import React from "react";
 
 const App = () => (
   <div>
-    <h1>Hello React</h1>
+    <h1>KPOP CARD TRACKLIST</h1>
   </div>
 );
 
