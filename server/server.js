@@ -1,12 +1,13 @@
 const path = require("path");
 const express = require("express");
-
 const app = express();
 const PORT = 3000;
 
-// app.get("/data", (req, res) => {
-//   return res.status(201).send("HI");
-// });
+const controller = require("./controllers/controller.js");
+
+app.get("/bts", controller.bts, (req, res) => {
+  return res.status(201).json(res.locals.bts);
+});
 
 // catch-all route handler for any requests to an unknown route
 app.use((req, res) =>
