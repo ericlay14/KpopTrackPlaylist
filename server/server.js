@@ -5,8 +5,52 @@ const PORT = 3000;
 
 const controller = require("./controllers/controller.js");
 
+// BTS
 app.get("/bts", controller.bts, (req, res) => {
   return res.status(201).json(res.locals.bts);
+});
+app.post("/bts", controller.Addbts, (req, res) => {
+  return res.status(201).send("Updated Artist");
+});
+
+// ITZY
+app.get("/itzy", controller.itzy, (req, res) => {
+  return res.status(201).json(res.locals.itzy);
+});
+app.post("/itzy", controller.AddItzy, (req, res) => {
+  return res.status(201).send("Updated Artist");
+});
+
+// Loona
+app.get("/loona", controller.loona, (req, res) => {
+  return res.status(201).json(res.locals.loona);
+});
+app.post("/loona", controller.AddLoona, (req, res) => {
+  return res.status(201).send("Updated Artist");
+});
+
+// Enhypen
+app.get("/enhypen", controller.enhypen, (req, res) => {
+  return res.status(201).json(res.locals.enhypen);
+});
+app.post("/loona", controller.AddEnhypen, (req, res) => {
+  return res.status(201).send("Updated Artist");
+});
+
+// Woo!ah!
+app.get("/woo!ah!", controller.wooah, (req, res) => {
+  return res.status(201).json(res.locals.wooah);
+});
+app.post("/woo!ah!", controller.AddWooah, (req, res) => {
+  return res.status(201).send("Updated Artist");
+});
+
+// Ateez
+app.get("/ateez", controller.ateez, (req, res) => {
+  return res.status(201).json(res.locals.ateez);
+});
+app.post("/ateez", controller.AddAteez, (req, res) => {
+  return res.status(201).send("Updated Artist");
 });
 
 // catch-all route handler for any requests to an unknown route
