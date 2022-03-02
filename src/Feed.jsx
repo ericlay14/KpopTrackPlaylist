@@ -6,7 +6,10 @@ const Feed = () => (
     <h1>Artist Card</h1>
     <div class="row">
       <div class="column">
-        <div class="card">BTS</div>
+        <div class="card">
+          BTS
+          <img src="bts_butter.png" alt="BTS Butter"></img>
+        </div>
       </div>
       <div class="column">
         <div class="card">ITZY</div>
