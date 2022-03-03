@@ -2,12 +2,26 @@ const db = require("../models/artistModel.js");
 
 const controller = {};
 
+controller.getArtists = async (req, res, next) => {
+  try {
+    const query = "SELECT * FROM artist_info";
+    const result = await db.query(query);
+    console.log("result: ", result);
+    res.locals.artists = result.rows;
+    return next();
+  } catch (err) {
+    console.log("Error getting artists: ", err);
+  }
+};
+
+/*
 // BTS
 controller.bts = async (req, res, next) => {
   try {
     const bts = "SELECT * FROM artist_info WHERE _id = 1";
     const result = await db.query(bts);
     res.locals.bts = result.rows;
+    console.log("result rows: ", result.rows);
     return next();
   } catch (error) {
     console.log(error);
@@ -145,5 +159,6 @@ controller.AddAteez = async (req, res, next) => {
     console.log(error);
   }
 };
+*/
 
 module.exports = controller;

@@ -5,6 +5,16 @@ const PORT = 3000;
 
 const controller = require("./controllers/controller.js");
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
+
+app.get("/artists", controller.getArtists, (req, res) => {
+  return res.status(200).json(res.locals.artists);
+});
+
+/*
 // BTS
 app.get("/bts", controller.bts, (req, res) => {
   return res.status(201).json(res.locals.bts);
@@ -52,6 +62,7 @@ app.get("/ateez", controller.ateez, (req, res) => {
 app.post("/ateez", controller.AddAteez, (req, res) => {
   return res.status(201).send("Updated Artist");
 });
+*/
 
 // catch-all route handler for any requests to an unknown route
 app.use((req, res) =>
