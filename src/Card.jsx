@@ -14,9 +14,9 @@ class Card extends React.Component {
     switch (this.props.data["artist_name"]) {
       case "BTS":
         (imgUrl =
-          "https://www.nme.com/wp-content/uploads/2021/05/bts-butterconceptteaser-2021.jpg"),
-          (youtubeLink = "https://www.youtube.com/embed/WMweEpGlu_U"),
-          (youtubePerformance = "https://www.youtube.com/embed/DbXMjAYSa68");
+          "https://www.nme.com/wp-content/uploads/2021/12/bts-7-fates-teaser-hybe-labels-131221-696x442.jpg"),
+          (youtubeLink = "https://www.youtube.com/embed/8uxI-0ge4-Y"),
+          (youtubePerformance = "https://www.youtube.com/embed/AnyTLfeABuM");
         break;
       case "ATEEZ":
         (imgUrl = "https://images.alphacoders.com/117/1176454.png"),
@@ -58,18 +58,18 @@ class Card extends React.Component {
       <div className="card">
         <h1>{this.props.data["artist_name"]}</h1>
         <img src={imgUrl} height="250"></img>
-        <div>
+        <h4>
           Members: {this.props.data["members"].map((member) => member + ",")}
-        </div>
-        <div>Debut Date: {this.props.data["debut_date"]}</div>
-        <div>Song Title: {this.props.data["song_title"]}</div>
-        <h3>Music Video</h3>
+        </h4>
+        <h4>Debut Date: {this.props.data["debut_date"]}</h4>
+        <h4>Song Title: {this.props.data["song_title"]}</h4>
+        <h2>Song</h2>
         <div align="center">
           <iframe src={youtubeLink} height="300" width="400">
             {" "}
           </iframe>
         </div>
-        <h3>Performance Video</h3>
+        <h2>Performance Video</h2>
         <div align="center">
           <iframe src={youtubePerformance} height="300" width="400">
             {" "}

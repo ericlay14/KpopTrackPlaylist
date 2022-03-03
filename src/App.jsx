@@ -18,8 +18,7 @@ class App extends React.Component {
       .then((response) => response.json())
       .then((artists) => {
         this.setState({ artists });
-      })
-      .catch((error) => console.log(`Error getting artists: ${error}`));
+      });
   }
 
   showCards() {

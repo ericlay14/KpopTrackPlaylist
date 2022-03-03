@@ -14,17 +14,32 @@ controller.getArtists = async (req, res, next) => {
   }
 };
 
-controller.updateSong = async (req, res, next) => {
+controller.Addbts = async (req, res, next) => {
+  // const artist = req.body.artist
   try {
-    const query = "SELECT * FROM artist_info ORDER BY _id";
-    const result = await db.query(query);
-    console.log("result: ", result);
-    res.locals.artists = result.rows;
+    //const { newSong } = req.body;
+    const addSong =
+      "UPDATE artist_info SET song_title = 'Stay''Butter' WHERE artist_name = 'BTS';";
+    const result = await db.query(addSong);
+    res.locals.Addbts = result.rows;
     return next();
-  } catch (err) {
-    console.log("Error getting artists: ", err);
+  } catch (error) {
+    console.log(error);
   }
 };
+
+// controller.updateSong = async (req, res, next) => {
+//   try {
+//     const { newSong } = req.body;
+//     const query = "INSERT INTO song_title (newSong) VALUES ($1) RETURNING *";
+//     const result = await db.query(query, [newSong]);
+//     console.log("result: ", result);
+//     res.locals.artists = result.rows;
+//     return next();
+//   } catch (err) {
+//     console.log("Error getting artists: ", err);
+//   }
+// };
 
 /*
 // BTS
@@ -40,11 +55,11 @@ controller.bts = async (req, res, next) => {
   }
 };
 controller.Addbts = async (req, res, next) => {
-  // const artist = req.body.aritist
+  // const artist = req.body.artist
   try {
     //const { newSong } = req.body;
     const addSong =
-      "UPDATE artist_info SET song_title = 'Butter''Stay' WHERE artist_name = 'BTS';";
+      "UPDATE artist_info SET song_title = 'Stay''Butter' WHERE artist_name = 'BTS';";
     const result = await db.query(addSong);
     res.locals.Addbts = result.rows;
     return next();

@@ -14,9 +14,12 @@ app.get("/artists", controller.getArtists, (req, res) => {
   return res.status(200).json(res.locals.artists);
 });
 
-app.post("/artists", controller.updateSong, (req, res) => {
-  return res.status(201).send("Updated Song");
+app.post("/bts", controller.Addbts, (req, res) => {
+  return res.status(201).send("Updated Artist");
 });
+// app.post("/artists", controller.updateSong, (req, res) => {
+//   return res.status(201).send("Updated Song");
+// });
 /*
 // BTS
 app.get("/bts", controller.bts, (req, res) => {
