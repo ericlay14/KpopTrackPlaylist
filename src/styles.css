@@ -56,4 +56,5 @@ body {
 .card {
   border: 1px solid black;
   margin: 16px;
+  background-color: aqua;
 }

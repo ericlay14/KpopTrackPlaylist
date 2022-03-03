@@ -14,7 +14,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/artists", { body: { name: "BTS" } })
+    fetch("http://localhost:3000/artists")
       .then((response) => response.json())
       .then((artists) => {
         this.setState({ artists });
