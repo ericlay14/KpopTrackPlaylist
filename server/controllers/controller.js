@@ -4,7 +4,19 @@ const controller = {};
 
 controller.getArtists = async (req, res, next) => {
   try {
-    const query = "SELECT * FROM artist_info";
+    const query = "SELECT * FROM artist_info ORDER BY _id";
+    const result = await db.query(query);
+    console.log("result: ", result);
+    res.locals.artists = result.rows;
+    return next();
+  } catch (err) {
+    console.log("Error getting artists: ", err);
+  }
+};
+
+controller.updateSong = async (req, res, next) => {
+  try {
+    const query = "SELECT * FROM artist_info ORDER BY _id";
     const result = await db.query(query);
     console.log("result: ", result);
     res.locals.artists = result.rows;
@@ -28,6 +40,7 @@ controller.bts = async (req, res, next) => {
   }
 };
 controller.Addbts = async (req, res, next) => {
+  // const artist = req.body.aritist
   try {
     //const { newSong } = req.body;
     const addSong =

@@ -38,7 +38,7 @@ class App extends React.Component {
       }
     });
 
-    const button = !this.state.showCards ? (
+    const buttonShowHide = !this.state.showCards ? (
       <button onClick={this.showCards}>Show Cards</button>
     ) : (
       <button onClick={this.hideCards}>Hide Cards</button>
@@ -46,9 +46,9 @@ class App extends React.Component {
 
     return (
       <div className="container">
-        <h1>KPOP CARD TRACKLIST</h1>
+        <h1>KPOP FAVORITE SONG CARD</h1>
         <h1>Artist Card</h1>
-        {button}
+        {buttonShowHide}
         <div className="card-container">{cards}</div>
       </div>
     );
