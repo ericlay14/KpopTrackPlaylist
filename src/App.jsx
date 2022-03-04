@@ -9,10 +9,12 @@ class App extends React.Component {
       showCards: false,
       artists: [],
     };
+    // need to bind to actually use the buttons
     this.showCards = this.showCards.bind(this);
     this.hideCards = this.hideCards.bind(this);
   }
 
+  // fetchs the information from the database for the artist
   componentDidMount() {
     fetch("http://localhost:3000/artists")
       .then((response) => response.json())
@@ -21,6 +23,7 @@ class App extends React.Component {
       });
   }
 
+  // sets the showcards in setState if true or false
   showCards() {
     this.setState({ showCards: true });
   }
@@ -37,6 +40,7 @@ class App extends React.Component {
       }
     });
 
+    // button that checks if the button is showing or hiding cards
     const buttonShowHide = !this.state.showCards ? (
       <button onClick={this.showCards}>Show Cards</button>
     ) : (

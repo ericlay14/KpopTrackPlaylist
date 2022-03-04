@@ -55,8 +55,9 @@ body {
 }
 
 .card {
-  border: 1px solid black;
+  border: 10px solid black;
   margin: 16px;
   background-color: aqua;
-  border-color: rgb(255, 127, 227);
+  border-color: red rgba(170, 50, 220, 0.6) green;
+  /* border-top-color: darkblue; */
 }

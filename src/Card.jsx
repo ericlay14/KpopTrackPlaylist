@@ -65,13 +65,13 @@ class Card extends React.Component {
         <h4>Song Title: {this.props.data["song_title"]}</h4>
         <h2>Song</h2>
         <div align="center">
-          <iframe src={youtubeLink} height="300" width="400">
+          <iframe src={youtubeLink} height="300" width="450">
             {" "}
           </iframe>
         </div>
         <h2>Performance Video</h2>
         <div align="center">
-          <iframe src={youtubePerformance} height="300" width="400">
+          <iframe src={youtubePerformance} height="300" width="450">
             {" "}
           </iframe>
         </div>
